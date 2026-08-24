@@ -95,7 +95,6 @@ const GROUPS = [
   },
 ];
 
-export default undefined as never;
 
 function Capabilities() {
   const { projects } = useSite();
