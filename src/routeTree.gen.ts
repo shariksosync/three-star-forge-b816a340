@@ -16,6 +16,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as IndustriesRouteImport } from './routes/industries'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as AdminLoginRouteImport } from './routes/admin_.login'
 import { Route as ProjectsIndexRouteImport } from './routes/projects.index'
 import { Route as ProjectsProjectIdRouteImport } from './routes/projects.$projectId'
 
@@ -54,6 +55,11 @@ const ServicesRoute = ServicesRouteImport.update({
   path: '/services',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminLoginRoute = AdminLoginRouteImport.update({
+  id: '/admin_/login',
+  path: '/admin/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProjectsIndexRoute = ProjectsIndexRouteImport.update({
   id: '/projects/',
   path: '/projects/',
@@ -73,6 +79,7 @@ export interface FileRoutesByFullPath {
   '/gallery': typeof GalleryRoute
   '/industries': typeof IndustriesRoute
   '/services': typeof ServicesRoute
+  '/admin/login': typeof AdminLoginRoute
   '/projects/$projectId': typeof ProjectsProjectIdRoute
   '/projects/': typeof ProjectsIndexRoute
 }
@@ -84,6 +91,7 @@ export interface FileRoutesByTo {
   '/gallery': typeof GalleryRoute
   '/industries': typeof IndustriesRoute
   '/services': typeof ServicesRoute
+  '/admin/login': typeof AdminLoginRoute
   '/projects/$projectId': typeof ProjectsProjectIdRoute
   '/projects': typeof ProjectsIndexRoute
 }
@@ -96,6 +104,7 @@ export interface FileRoutesById {
   '/gallery': typeof GalleryRoute
   '/industries': typeof IndustriesRoute
   '/services': typeof ServicesRoute
+  '/admin_/login': typeof AdminLoginRoute
   '/projects/$projectId': typeof ProjectsProjectIdRoute
   '/projects/': typeof ProjectsIndexRoute
 }
@@ -109,6 +118,7 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/industries'
     | '/services'
+    | '/admin/login'
     | '/projects/$projectId'
     | '/projects/'
   fileRoutesByTo: FileRoutesByTo
@@ -120,6 +130,7 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/industries'
     | '/services'
+    | '/admin/login'
     | '/projects/$projectId'
     | '/projects'
   id:
@@ -131,6 +142,7 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/industries'
     | '/services'
+    | '/admin_/login'
     | '/projects/$projectId'
     | '/projects/'
   fileRoutesById: FileRoutesById
@@ -143,6 +155,7 @@ export interface RootRouteChildren {
   GalleryRoute: typeof GalleryRoute
   IndustriesRoute: typeof IndustriesRoute
   ServicesRoute: typeof ServicesRoute
+  AdminLoginRoute: typeof AdminLoginRoute
   ProjectsProjectIdRoute: typeof ProjectsProjectIdRoute
   ProjectsIndexRoute: typeof ProjectsIndexRoute
 }
@@ -198,6 +211,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin_/login': {
+      id: '/admin_/login'
+      path: '/admin/login'
+      fullPath: '/admin/login'
+      preLoaderRoute: typeof AdminLoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects/': {
       id: '/projects/'
       path: '/projects'
@@ -223,6 +243,7 @@ const rootRouteChildren: RootRouteChildren = {
   GalleryRoute: GalleryRoute,
   IndustriesRoute: IndustriesRoute,
   ServicesRoute: ServicesRoute,
+  AdminLoginRoute: AdminLoginRoute,
   ProjectsProjectIdRoute: ProjectsProjectIdRoute,
   ProjectsIndexRoute: ProjectsIndexRoute,
 }

@@ -4,7 +4,7 @@ import { ADMIN_CREDENTIALS } from "@/data/site";
 import { useSite } from "@/store/site-store";
 import { Btn, Container, TechLabel } from "@/components/site/ui";
 
-export const Route = createFileRoute("/admin/login")({
+export const Route = createFileRoute("/admin_/login")({
   head: () => ({
     meta: [
       { title: "Admin Login — Three Star Enterprises" },
