@@ -118,7 +118,12 @@ function Contact() {
               <Row label="Contact person" value={company.contactPerson} />
               <Row label="Company" value={company.name} />
               <Row label="Address" value={company.address} />
-              <Row label="Phone" value={company.phone} href={`tel:${company.phone.split("/")[0].trim()}`} />
+              <Row
+                label="Phone"
+                value={company.phone}
+                href={`tel:${(company.phone.split("/")[0] ?? "").trim()}`}
+              />
+
               <Row label="Email" value={company.email} href={`mailto:${company.email}`} />
               <Row label="Website" value={company.website} />
             </dl>
