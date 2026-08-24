@@ -126,6 +126,7 @@ export type Service = {
   title: string;
   summary: string;
   points: string[];
+  outcome: string;
 };
 
 export const SERVICES: Service[] = [
@@ -141,6 +142,8 @@ export const SERVICES: Service[] = [
       "Product development support for OEM programmes",
       "Manufacturing-oriented drawings and assembly documentation",
     ],
+    outcome:
+      "A manufacturable design pack — layouts, assemblies and drawings ready to release to the shop floor.",
   },
   {
     id: "turnkey-manufacturing",
@@ -154,6 +157,8 @@ export const SERVICES: Service[] = [
       "Mechanical assembly and integration",
       "Trials and handover support",
     ],
+    outcome:
+      "A built, assembled and trialled machine handed over with its build documentation.",
   },
   {
     id: "product-management",
@@ -167,6 +172,8 @@ export const SERVICES: Service[] = [
       "Build schedule and milestone tracking",
       "Documentation for repeat manufacturing",
     ],
+    outcome:
+      "One accountable engineering owner across drawings, sourcing and build milestones.",
   },
   {
     id: "npi",
@@ -180,6 +187,8 @@ export const SERVICES: Service[] = [
       "Manufacturing setup definition",
       "Validation and stabilised production release",
     ],
+    outcome:
+      "Design, sourcing and setup risks resolved before production, not during it.",
   },
   {
     id: "procurement",
@@ -193,6 +202,8 @@ export const SERVICES: Service[] = [
       "Fabrication and machining outsourcing control",
       "Inspection at source where required",
     ],
+    outcome:
+      "Specified, sourced and inspected bought-out content aligned to the build schedule.",
   },
   {
     id: "process-optimization",
@@ -206,6 +217,8 @@ export const SERVICES: Service[] = [
       "Cycle time and ergonomics review",
       "Setup standardisation",
     ],
+    outcome:
+      "A process that runs repeatably at the expected cycle on the customer's floor.",
   },
   {
     id: "automation-material-handling",
@@ -219,6 +232,8 @@ export const SERVICES: Service[] = [
       "Accept-reject and sorting devices",
       "Inspection and crack detection handling systems",
     ],
+    outcome:
+      "Handling, conveying and inspection integrated into the existing line flow.",
   },
 ];
 

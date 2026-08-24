@@ -85,7 +85,7 @@ function Services() {
                 <div className="lg:col-span-4">
                   <TechLabel>Scope</TechLabel>
                   <ul className="mt-4 space-y-2.5">
-                    {s.scope.map((item) => (
+                    {s.points.map((item: string) => (
                       <li key={item} className="flex gap-3 text-sm text-foreground">
                         <span className="mt-[0.55rem] h-1 w-1 shrink-0 bg-accent" />
                         <span className="leading-relaxed">{item}</span>
@@ -109,7 +109,7 @@ function Services() {
       <Section dark tight>
         <InView>
           <SectionHead
-            tone="light"
+            dark
             index="2.2"
             eyebrow="Engagement"
             title="Three ways to bring us into a programme"
@@ -141,7 +141,7 @@ function Services() {
         </div>
         <InView delay={200}>
           <div className="mt-12 flex flex-wrap gap-4">
-            <Btn to="/contact" variant="accent">
+            <Btn to="/contact" variant="primary">
               Discuss a requirement
             </Btn>
             <Btn to="/projects" variant="light">
